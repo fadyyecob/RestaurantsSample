@@ -1,24 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pa0-d5-y3a">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Restaurants-->
+        <scene sceneID="sd0-RZ-aO9">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController storyboardIdentifier="restaurantViewController" title="Restaurants" id="dkD-F1-1xS" customClass="RestaurantsTableViewController" customModule="Takeaway" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="66" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nkK-pS-gYy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="restaurantCell" rowHeight="66" id="dkT-mj-XyA" customClass="RestaurantTableViewCell" customModule="Takeaway" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dkT-mj-XyA" id="YFY-yl-FHj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TU-Cf-zbe">
+                                            <rect key="frame" x="315" y="11" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="6TU-Cf-zbe" secondAttribute="height" multiplier="1:1" id="69e-4o-E8d"/>
+                                            </constraints>
+                                            <state key="normal" image="heart"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc8-iG-Q6g">
+                                            <rect key="frame" x="16" y="8" width="291" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Sort Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klB-a3-6cP">
+                                            <rect key="frame" x="16" y="28.5" width="291" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocs-G5-EBz">
+                                            <rect key="frame" x="16" y="43" width="291" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oc8-iG-Q6g" firstAttribute="leading" secondItem="YFY-yl-FHj" secondAttribute="leadingMargin" id="9kW-3b-1Kx"/>
+                                        <constraint firstItem="ocs-G5-EBz" firstAttribute="leading" secondItem="klB-a3-6cP" secondAttribute="leading" id="CVH-cK-iqp"/>
+                                        <constraint firstItem="6TU-Cf-zbe" firstAttribute="leading" secondItem="ocs-G5-EBz" secondAttribute="trailing" constant="8" id="Exp-ul-mVr"/>
+                                        <constraint firstItem="6TU-Cf-zbe" firstAttribute="trailing" secondItem="YFY-yl-FHj" secondAttribute="trailingMargin" id="IEg-ke-rkF"/>
+                                        <constraint firstItem="oc8-iG-Q6g" firstAttribute="top" secondItem="YFY-yl-FHj" secondAttribute="top" constant="8" id="ShF-uO-9Re"/>
+                                        <constraint firstItem="klB-a3-6cP" firstAttribute="top" secondItem="oc8-iG-Q6g" secondAttribute="bottom" id="SwD-97-Osb"/>
+                                        <constraint firstAttribute="bottom" secondItem="ocs-G5-EBz" secondAttribute="bottom" constant="8" id="TVd-eG-uOG"/>
+                                        <constraint firstItem="6TU-Cf-zbe" firstAttribute="bottom" secondItem="YFY-yl-FHj" secondAttribute="bottomMargin" id="bbL-ne-Ey1"/>
+                                        <constraint firstItem="ocs-G5-EBz" firstAttribute="top" secondItem="klB-a3-6cP" secondAttribute="bottom" id="fQW-CM-gag"/>
+                                        <constraint firstItem="6TU-Cf-zbe" firstAttribute="leading" secondItem="oc8-iG-Q6g" secondAttribute="trailing" constant="8" id="kKN-XX-UwC"/>
+                                        <constraint firstItem="klB-a3-6cP" firstAttribute="leading" secondItem="YFY-yl-FHj" secondAttribute="leadingMargin" id="oym-Ts-qeT"/>
+                                        <constraint firstItem="6TU-Cf-zbe" firstAttribute="top" secondItem="YFY-yl-FHj" secondAttribute="topMargin" id="p5H-xv-Lzj"/>
+                                        <constraint firstItem="6TU-Cf-zbe" firstAttribute="leading" secondItem="klB-a3-6cP" secondAttribute="trailing" constant="8" id="yPV-tw-dZ0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="favouriteButton" destination="6TU-Cf-zbe" id="aoA-o8-yrs"/>
+                                    <outlet property="nameLabel" destination="oc8-iG-Q6g" id="9Ja-4K-t4W"/>
+                                    <outlet property="sortLabel" destination="klB-a3-6cP" id="En3-9C-4FA"/>
+                                    <outlet property="statusLabel" destination="ocs-G5-EBz" id="hEp-DA-ORG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dkD-F1-1xS" id="MuN-9T-M9l"/>
+                            <outlet property="delegate" destination="dkD-F1-1xS" id="daL-pq-t1m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Restaurants" id="gQk-w8-Oox">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="v3R-Xb-zHI">
+                            <connections>
+                                <action selector="sortAction:" destination="dkD-F1-1xS" id="ewj-ty-lUm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sortButton" destination="v3R-Xb-zHI" id="xPI-p9-uHD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDh-74-fMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-530.39999999999998" y="-456.52173913043481"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H1B-9M-12f">
+            <objects>
+                <navigationController id="Pa0-d5-y3a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HDr-uC-hw1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dkD-F1-1xS" kind="relationship" relationship="rootViewController" id="66l-E3-Old"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlX-ew-CgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1482" y="-456"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="45" height="45"/>
+    </resources>
 </document>

@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B1B6D6DD217D2D0D00856333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D6DC217D2D0D00856333 /* AppDelegate.swift */; };
-		B1B6D6DF217D2D0D00856333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D6DE217D2D0D00856333 /* ViewController.swift */; };
 		B1B6D6E2217D2D0D00856333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B6D6E0217D2D0D00856333 /* Main.storyboard */; };
 		B1B6D6E5217D2D0D00856333 /* Takeaway.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D6E3217D2D0D00856333 /* Takeaway.xcdatamodeld */; };
 		B1B6D6E7217D2D1000856333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B6D6E6217D2D1000856333 /* Assets.xcassets */; };
 		B1B6D6EA217D2D1000856333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B6D6E8217D2D1000856333 /* LaunchScreen.storyboard */; };
 		B1B6D6F5217D2D1000856333 /* TakeawayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D6F4217D2D1000856333 /* TakeawayTests.swift */; };
 		B1B6D700217D2D1000856333 /* TakeawayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D6FF217D2D1000856333 /* TakeawayUITests.swift */; };
+		B1B6D70E217D2D8100856333 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = B1B6D70D217D2D8100856333 /* sample.json */; };
+		B1B6D710217D2E7B00856333 /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D70F217D2E7B00856333 /* RestaurantsTableViewController.swift */; };
+		B1B6D712217D2EB600856333 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D711217D2EB600856333 /* Restaurant.swift */; };
+		B1B6D714217D398C00856333 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6D713217D398C00856333 /* RestaurantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		B1B6D6D9217D2D0D00856333 /* Takeaway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Takeaway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B6D6DC217D2D0D00856333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1B6D6DE217D2D0D00856333 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1B6D6E1217D2D0D00856333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1B6D6E4217D2D0D00856333 /* Takeaway.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Takeaway.xcdatamodel; sourceTree = "<group>"; };
 		B1B6D6E6217D2D1000856333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		B1B6D6FB217D2D1000856333 /* TakeawayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeawayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B6D6FF217D2D1000856333 /* TakeawayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeawayUITests.swift; sourceTree = "<group>"; };
 		B1B6D701217D2D1000856333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B6D70D217D2D8100856333 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		B1B6D70F217D2E7B00856333 /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
+		B1B6D711217D2EB600856333 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		B1B6D713217D398C00856333 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +106,14 @@
 			isa = PBXGroup;
 			children = (
 				B1B6D6DC217D2D0D00856333 /* AppDelegate.swift */,
-				B1B6D6DE217D2D0D00856333 /* ViewController.swift */,
+				B1B6D70F217D2E7B00856333 /* RestaurantsTableViewController.swift */,
+				B1B6D713217D398C00856333 /* RestaurantTableViewCell.swift */,
+				B1B6D711217D2EB600856333 /* Restaurant.swift */,
 				B1B6D6E0217D2D0D00856333 /* Main.storyboard */,
 				B1B6D6E6217D2D1000856333 /* Assets.xcassets */,
 				B1B6D6E8217D2D1000856333 /* LaunchScreen.storyboard */,
 				B1B6D6EB217D2D1000856333 /* Info.plist */,
+				B1B6D70D217D2D8100856333 /* sample.json */,
 				B1B6D6E3217D2D0D00856333 /* Takeaway.xcdatamodeld */,
 			);
 			path = Takeaway;
@@ -233,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B6D6EA217D2D1000856333 /* LaunchScreen.storyboard in Resources */,
+				B1B6D70E217D2D8100856333 /* sample.json in Resources */,
 				B1B6D6E7217D2D1000856333 /* Assets.xcassets in Resources */,
 				B1B6D6E2217D2D0D00856333 /* Main.storyboard in Resources */,
 			);
@@ -259,9 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1B6D6DF217D2D0D00856333 /* ViewController.swift in Sources */,
+				B1B6D714217D398C00856333 /* RestaurantTableViewCell.swift in Sources */,
+				B1B6D712217D2EB600856333 /* Restaurant.swift in Sources */,
 				B1B6D6E5217D2D0D00856333 /* Takeaway.xcdatamodeld in Sources */,
 				B1B6D6DD217D2D0D00856333 /* AppDelegate.swift in Sources */,
+				B1B6D710217D2E7B00856333 /* RestaurantsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
